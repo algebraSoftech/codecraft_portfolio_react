@@ -8,8 +8,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Slide from "../components/Slide";
 import Collaboration from "../components/Collaboration";
-import Experience from "../components/Experience";
-import TestimonialSlider from "../components/TestimonialSlider";
+
 
 const HomePage = () => {
   return (
@@ -48,9 +47,7 @@ const HomePage = () => {
         <About />
       </div>
 
-      {/* <div id="experience">
-        <Experience />
-      </div> */}
+
 
       <div id="slide">
         <Slide />
@@ -63,9 +60,6 @@ const HomePage = () => {
       <div id="project">
         <Project />
       </div>
-      {/* <div>
-        <TestimonialSlider />
-      </div> */}
 
       <div id="collaboration">
         <Collaboration />

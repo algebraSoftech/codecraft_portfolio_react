@@ -6,7 +6,7 @@ import {
   Smartphone,
   Globe,
   Rocket,
-  PenTool,
+  
   Figma,
 } from "lucide-react";
 
