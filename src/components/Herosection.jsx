@@ -55,7 +55,7 @@ const Herosection = () => {
 
         {/* WhatsApp Button */}
         <motion.a
-          href="https://wa.me/918962017022"
+          href="https://wa.me/917400932891"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: 20 }}

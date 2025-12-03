@@ -98,15 +98,8 @@ const Services = () => {
       </div>
 
       {/* WhatsApp CTA */}
-      <div className="text-center mt-14">
-        <a
-          href="https://wa.me/91XXXXXXXXXX"
-          target="_blank"
-          className="px-8 py-3 text-lg font-semibold rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition-all"
-        >
-          📩 Contact on WhatsApp
-        </a>
-      </div>
+
+
     </section>
   );
 };

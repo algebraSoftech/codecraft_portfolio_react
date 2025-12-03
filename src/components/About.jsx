@@ -96,14 +96,14 @@ const About = () => {
 
         {/* WhatsApp Button */}
         <div className="flex justify-center mt-12">
-          <a
-            href="https://wa.me/917400932891"
-            target="_blank"
-            className="px-8 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-all"
-          >
-            📩 Contact Us on WhatsApp
-          </a>
-        </div>
+  <button
+    onClick={() => window.open("https://wa.me/917400932891", "_blank")}
+    className="px-8 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-all flex items-center gap-2"
+  >
+    📩 Contact Us on WhatsApp
+  </button>
+</div>
+
       </div>
     </section>
   );
