@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Palette, Smartphone, Globe } from "lucide-react";
+import { Code2, Palette, Smartphone, Globe, Brain } from "lucide-react";
 
 const About = () => {
   return (
@@ -32,78 +32,114 @@ const About = () => {
               <span className="font-semibold text-[#1ab7e3]">
                 CodeCraft Team
               </span>{" "}
-              — a group of passionate and skilled developers who specialize in
-              creating high-quality, modern, and scalable digital products.
+              — a team of skilled developers and AI/ML engineers focused on
+              building modern, scalable, and intelligent digital products.
             </p>
 
             <p className="text-lg text-justify text-gray-300 leading-relaxed">
-              From websites to mobile-friendly interfaces, our team provides
-              end-to-end development services for clients, startups, and growing
-              businesses looking for reliable and creative solutions.
+              Our expertise spans full-stack web development, UI/UX design,
+              mobile-responsive interfaces, and AI/ML-powered solutions that
+              help businesses automate, optimize, and scale efficiently.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6 pt-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-[#1ab7e3] mb-2">
-                  20+
+                  25+
                 </div>
                 <div className="text-sm text-gray-400">Projects Delivered</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-[#1ab7e3] mb-2">
-                  3 Devs
+                  4 Devs
                 </div>
                 <div className="text-sm text-gray-400">
-                  Skilled Team Members
+                  Developers & AI/ML Engineers
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Skills Icons */}
-          <div className="grid grid-cols-2 gap-4">
-            {[Code2, Palette, Smartphone, Globe].map((Icon, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl border border-white/10 bg-[#131822] shadow-md hover:shadow-xl transition-all text-center backdrop-blur-sm"
-              >
-                <Icon className="w-8 h-8 text-[#1ab7e3] mx-auto mb-3" />
-                <h3 className="font-semibold mb-1 text-lg">
-                  {
-                    [
-                      "Web Development",
-                      "UI/UX Design",
-                      "Responsive Design",
-                      "SEO & Optimization",
-                    ][index]
-                  }
-                </h3>
-                <p className="text-sm text-gray-400">
-                  {
-                    [
-                      "Custom websites & web apps",
-                      "Modern & user-friendly designs",
-                      "Fully responsive across devices",
-                      "Boost ranking & performance",
-                    ][index]
-                  }
-                </p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            {[
+              {
+                icon: Code2,
+                title: "Web Development",
+                desc: "Scalable full-stack web applications",
+              },
+              {
+                icon: Palette,
+                title: "UI/UX Design",
+                desc: "Clean, modern & user-focused designs",
+              },
+              {
+                icon: Smartphone,
+                title: "Responsive Development",
+                desc: "Optimized for all screen sizes",
+              },
+              {
+                icon: Brain,
+                title: "AI & ML Development",
+                desc: "Intelligent systems, automation & analytics",
+              },
+            ].map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={index}
+                  className="
+                    p-5 sm:p-6
+                    rounded-xl
+                    border border-white/10
+                    bg-[#131822]
+                    shadow-md
+                    hover:shadow-xl
+                    transition-all duration-300
+                    text-center
+                    backdrop-blur-sm
+                    hover:-translate-y-1
+                  "
+                >
+                  <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-[#1ab7e3] mx-auto mb-3" />
+
+                  <h3 className="font-semibold text-base sm:text-lg mb-1">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {/* WhatsApp Button */}
-        <div className="flex justify-center mt-12">
-  <button
-    onClick={() => window.open("https://wa.me/917400932891", "_blank")}
-    className="px-8 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-all flex items-center gap-2"
-  >
-    📩 Contact Us on WhatsApp
-  </button>
-</div>
-
+        <div className="flex justify-center mt-8 sm:mt-12 px-4">
+          <button
+            onClick={() => window.open("https://wa.me/917400932891", "_blank")}
+            className="
+              w-full sm:w-auto
+              px-6 sm:px-8
+              py-3 sm:py-3.5
+              rounded-full
+              bg-green-500 hover:bg-green-600
+              text-white
+              text-sm sm:text-base
+              font-semibold
+              shadow-lg
+              transition-all duration-300
+              flex items-center justify-center gap-2
+              hover:scale-105
+              active:scale-95
+            "
+          >
+            📩 Contact Us on WhatsApp
+          </button>
+        </div>
       </div>
     </section>
   );

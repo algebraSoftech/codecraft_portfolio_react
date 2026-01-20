@@ -6,7 +6,7 @@ import { IoLogoWhatsapp } from "react-icons/io5";
 const Herosection = () => {
   return (
     <div
-      className="flex flex-col-reverse md:flex-row w-full min-h-screen items-center justify-between px-4 sm:px-8 lg:px-20 py-10 gap-10"
+      className="flex flex-col-reverse md:flex-row w-full min-h-screen items-center justify-between px-4 sm:px-8 lg:px-20 py-20 gap-10"
       id="home"
     >
       {/* Left Section */}
@@ -54,17 +54,23 @@ const Herosection = () => {
         </motion.p>
 
         {/* WhatsApp Button */}
-        <motion.a
-          href="https://wa.me/917400932891"
-          target="_blank"
-          rel="noopener noreferrer"
+        <motion.button
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              window.open("https://wa.me/917400932891", "_blank");
+            }
+          }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.4 }}
-          className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-green-500 text-white rounded-full hover:bg-green-500/20 transition duration-300 text-sm sm:text-base"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-all duration-300 text-sm sm:text-base"
         >
-          Contact Us <IoLogoWhatsapp className="w-5 h-5" />
-        </motion.a>
+          Contact Us
+          <IoLogoWhatsapp className="w-5 h-5" />
+        </motion.button>
       </div>
 
       {/* Right Section - Image */}

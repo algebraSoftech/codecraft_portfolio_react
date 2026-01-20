@@ -171,26 +171,26 @@ export const ProjectData = [
     forks: 20,
     views: 700,
   },
-  {
-    id: 5,
-    projectName: "E-library",
-    image1: Image1,
-    image2: "https://via.placeholder.com/150",
-    description:
-      "A task management tool that helps users organize and track their daily tasks, with the ability to set reminders and mark tasks as complete.",
-    githubLink: "https://github.com/username/task-manager",
-    liveLink: "https://task-manager-demo.com",
-    language: ["JavaScript", "React", "Redux"],
-  },
-  {
-    id: 6,
-    projectName: "E-commerce Platform",
-    image1: Image1,
-    image2: "https://via.placeholder.com/150",
-    description:
-      "An e-commerce platform that allows users to browse products, add them to the cart, and proceed with checkout. It includes payment integration and order tracking.",
-    githubLink: "https://github.com/username/ecommerce-platform",
-    liveLink: "https://ecommerce-platform-demo.com",
-    language: ["JavaScript", "React", "Node.js", "Express"],
-  },
+  // {
+  //   id: 5,
+  //   projectName: "E-library",
+  //   image1: Image1,
+  //   image2: "https://via.placeholder.com/150",
+  //   description:
+  //     "A task management tool that helps users organize and track their daily tasks, with the ability to set reminders and mark tasks as complete.",
+  //   githubLink: "https://github.com/username/task-manager",
+  //   liveLink: "https://task-manager-demo.com",
+  //   language: ["JavaScript", "React", "Redux"],
+  // },
+  // {
+  //   id: 6,
+  //   projectName: "E-commerce Platform",
+  //   image1: Image1,
+  //   image2: "https://via.placeholder.com/150",
+  //   description:
+  //     "An e-commerce platform that allows users to browse products, add them to the cart, and proceed with checkout. It includes payment integration and order tracking.",
+  //   githubLink: "https://github.com/username/ecommerce-platform",
+  //   liveLink: "https://ecommerce-platform-demo.com",
+  //   language: ["JavaScript", "React", "Node.js", "Express"],
+  // },
 ];

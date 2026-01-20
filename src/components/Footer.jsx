@@ -3,7 +3,7 @@ const Footer = () => {
     <div className="bg-n-8 w-full h-40 flex flex-col items-center justify-center">
       <hr className="w-11/12 border-violet-600 mb-4 border shadow-2xl shadow-violet-700" />
       <p className="text-white mb-4">
-        &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+        &copy; {new Date().getFullYear()} Algebra. All rights reserved.
       </p>
 
       {/* <div className="flex space-x-4">

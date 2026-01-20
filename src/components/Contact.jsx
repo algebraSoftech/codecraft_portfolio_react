@@ -1,30 +1,65 @@
-import React, { useRef } from "react";
+import React, { useRef , useState } from "react";
 import ContactImage from "../assets/3641599.jpg";
 import { motion } from "framer-motion";
 import { User, Mail, MessageSquare, Type } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef(null);
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = async (e) => {
     e.preventDefault();
+    if (isSending) return;
 
-    emailjs
-      .sendForm(
-        "service_iojgqfi", // ✔ Your SERVICE ID
-        "template_w7nglsu", // ✔ Your TEMPLATE ID
+    setIsSending(true);
+
+    // Loader alert
+    Swal.fire({
+      title: "Sending message...",
+      text: "Please wait a moment",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      background: "#1e1e2f",
+      color: "#ffffff",
+      didOpen: () => Swal.showLoading(),
+    });
+
+    try {
+      await emailjs.sendForm(
+        "service_iojgqfi",      // Service ID
+        "template_w7nglsu",     // Template ID
         formRef.current,
-        "-gXSPSPUHiQbqse4i" // ✔ Your PUBLIC KEY
-      )
-      .then(() => {
-        alert("Message sent successfully!");
-        formRef.current.reset();
-      })
-      .catch((error) => {
-        console.error(error);
-        alert("Failed to send message. Try again!");
+        "-gXSPSPUHiQbqse4i"     // Public Key
+      );
+
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent 🎉",
+        text: "Thank you for reaching out. We’ll contact you soon.",
+        timer: 3000,
+        timerProgressBar: true,
+        showConfirmButton: false,
+        background: "#1e1e2f",
+        color: "#ffffff",
       });
+
+      formRef.current.reset();
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+
+      Swal.fire({
+        icon: "error",
+        title: "Failed to Send 😕",
+        text: "Something went wrong. Please try again later.",
+        confirmButtonColor: "#ef4444",
+        background: "#1e1e2f",
+        color: "#ffffff",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (

@@ -6,8 +6,8 @@ import {
   Smartphone,
   Globe,
   Rocket,
-  
   Figma,
+  Brain,
 } from "lucide-react";
 
 const Services = () => {
@@ -24,7 +24,7 @@ const Services = () => {
     },
     {
       title: "MERN Stack Development",
-      desc: "Full-stack scalable solutions using MongoDB, Express, React, and Node.",
+      desc: "Full-stack scalable solutions using MongoDB, Express, React, and Node.js.",
       icon: <Rocket className="w-12 h-12 text-green-400" />,
     },
     {
@@ -33,15 +33,16 @@ const Services = () => {
       icon: <Smartphone className="w-12 h-12 text-pink-400" />,
     },
     {
+      title: "AI & ML Development",
+      desc: "Intelligent AI/ML solutions including automation, data analysis, prediction models, and smart systems.",
+      icon: <Brain className="w-12 h-12 text-indigo-400" />,
+    },
+    {
       title: "UI/UX Design",
       desc: "Modern, clean, and user-focused interface designs using Figma.",
       icon: <Figma className="w-12 h-12 text-yellow-300" />,
     },
-    {
-      title: "SEO & Optimization",
-      desc: "Improve website speed, ranking, and online visibility for better conversions.",
-      icon: <Globe className="w-12 h-12 text-cyan-300" />,
-    },
+    
   ];
 
   return (
@@ -96,10 +97,6 @@ const Services = () => {
           </motion.div>
         ))}
       </div>
-
-      {/* WhatsApp CTA */}
-
-
     </section>
   );
 };
