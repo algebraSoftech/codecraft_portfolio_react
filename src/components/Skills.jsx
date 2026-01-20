@@ -4,7 +4,6 @@ import {
   Code2,
   Layers,
   Smartphone,
-  Globe,
   Rocket,
   Figma,
   Brain,

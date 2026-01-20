@@ -6,7 +6,6 @@ import photoshop from "../assets/collaboration/photoshop.png";
 import protopie from "../assets/collaboration/protopie.png";
 import raindrop from "../assets/collaboration/raindrop.png";
 import slack from "../assets/collaboration/slack.png";
-import Image1 from "../assets/Screenshot 2024-08-18 013513.png";
 import Expence_img_1 from "../assets/Project Image/Screenshot 2024-09-12 133631.png";
 import Expence_img_2 from "../assets/Project Image/Screenshot 2024-09-12 133659.png";
 import Gym_fit_1 from "../assets/Project Image/Gym-fit-1.png";

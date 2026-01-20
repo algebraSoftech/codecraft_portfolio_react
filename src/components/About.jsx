@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Palette, Smartphone, Globe, Brain } from "lucide-react";
+import { Code2, Palette, Smartphone, Brain } from "lucide-react";
 
 const About = () => {
   return (
